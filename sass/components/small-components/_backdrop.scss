@@ -1,0 +1,11 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform 250ms var(--transition-funktion),
+    visibility 250ms var(--transition-funktion),
+    opacity 250ms var(--transition-funktion);
+}

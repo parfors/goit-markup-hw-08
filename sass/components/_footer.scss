@@ -1,0 +1,116 @@
+.footer {
+  background-color: #2f303a;
+  padding: 60px 0;
+}
+.container--flexer {
+  @include flex-alignment($ai: baseline);
+}
+
+.logo--indent {
+  display: block;
+  margin-bottom: 20px;
+}
+.logo--light {
+  color: #ffffff;
+}
+
+.adress {
+  flex-grow: 1;
+  margin-right: 70px;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.adress__link {
+  display: block;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondery-footer-color);
+  text-decoration: none;
+  font-style: normal;
+  transition: color 250ms var(--transition-funktion);
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
+}
+.adress__link--colorizer {
+  color: #ffffff;
+}
+
+.footer-socials {
+  margin-right: 93px;
+}
+.footer-socials__title {
+  text-transform: uppercase;
+  @include font(14px, 700, 1.14, 0.03em);
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer-socials__list {
+  @include flex-alignment();
+}
+.footer-socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-socials__link {
+  @include flex-alignment();
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--transition-funktion);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.footer-socials__icon {
+  fill: #ffffff;
+}
+
+.subscribe__title {
+  @extend .footer-socials__title;
+}
+.subscribe__form {
+  display: flex;
+}
+.subscribe__label {
+  margin-right: 12px;
+}
+.subscribe__input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  outline: none;
+  transition: border 250ms var(--transition-funktion);
+  &:focus {
+    border: 1px solid #ffffff;
+  }
+  &::placeholder {
+    color: var(--secondery-footer-color);
+    transition: color 250ms var(--transition-funktion);
+  }
+  &:focus::placeholder {
+    color: #ffffff;
+  }
+}
+
+.button--flexer {
+  @include flex-alignment();
+  justify-content: center;
+}
+.subscribe__icon {
+  margin-left: 10px;
+  fill: #ffffff;
+  pointer-events: none;
+}
