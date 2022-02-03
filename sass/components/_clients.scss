@@ -1,20 +1,24 @@
-.clients__title {
-  text-align: center;
-  @include font(36px, 700, 1.17, 0.03em);
-  color: var(--title-text-color);
-  margin: 0 0 50px 0;
-}
 .companies {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
-.companies__item:not(:last-child) {
-  margin-right: 30px;
+.companies__item {
+  flex-basis: calc(100% / 2 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - 30px);
+  }
 }
 .companies__link {
   justify-content: center;
   @include flex-alignment();
-  width: 170px;
   height: 92px;
   color: #afb1b8;
   border: 1px solid;
