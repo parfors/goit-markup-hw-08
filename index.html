@@ -15,11 +15,11 @@
   </head>
   <body>
     <!--header-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a class="logo" href="./index.html"
-          >Web<span class="logo--dark">Studio</span></a
-        >
+          >Web<span class="logo--dark">Studio</span>
+        </a>
         <nav>
           <ul class="site-nav">
             <li class="site-nav__item">
@@ -55,8 +55,59 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-btn" data-menu-open>
+          <svg class="menu-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="menu is-hidden" data-menu>
+        <button type="button" class="menu__close-btn" data-menu-close>
+          <svg class="menu__close-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a
+              href="./index.html"
+              class="menu-nav__link menu-nav__link--curreent-color"
+              >Студия</a
+            >
+          </li>
+          <li class="menu-nav__item">
+            <a href="./portfolio.html" class="menu-nav__link">Портфолио</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="" class="menu-nav__link">Контакты</a>
+          </li>
+        </ul>
+        <a href="tel:+380961111111" class="meny-tel__link">+38 096 111 11 11</a>
+        <a href="mailto:info@devstudio.com" class="menu-adres__link"
+          >info@devstudio.com</a
+        >
+        <ul class="menu-social">
+          <li class="menu-social__item">
+            <a href="" class="menu-social__link">Instagram</a>
+          </li>
+          <li class="menu-social__item">
+            <a href="" class="menu-social__link menu-social__link--stick"
+              >Twitter</a
+            >
+          </li>
+          <li class="menu-social__item">
+            <a href="" class="menu-social__link menu-social__link--stick"
+              >Facebook</a
+            >
+          </li>
+          <li class="menu-social__item">
+            <a href="" class="menu-social__link menu-social__link--stick"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
     <!--Main section-->
     <main>
       <!--hero-->
@@ -530,5 +581,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
