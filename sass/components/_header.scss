@@ -10,10 +10,20 @@
 }
 .logo--dark {
   color: #000000;
+  margin-right: 88px;
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 .site-nav {
   display: none;
-  // display: flex;
+  @include tablet {
+    display: flex;
+    margin-right: 84px;
+  }
+  @include desktop {
+    margin-right: 305px;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -49,11 +59,23 @@
 
 .contacts {
   display: none;
-  // @include flex-alignment();
   margin-left: auto;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
-.contacts__item:last-child {
-  margin-left: 50px;
+.contacts__item:not(:last-child) {
+  @include tablet {
+    margin-bottom: 10px;
+  }
+  @include desktop {
+    margin-right: 30px;
+  }
+  // margin-left: 50px;
 }
 
 .contacts__link {
@@ -76,6 +98,9 @@
 .menu-btn {
   border: none;
   background-color: transparent;
+  @include tablet {
+    display: none;
+  }
 }
 .menu-btn__icon {
   .menu-btn:hover & {
