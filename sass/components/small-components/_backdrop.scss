@@ -9,3 +9,6 @@
     visibility 250ms var(--transition-funktion),
     opacity 250ms var(--transition-funktion);
 }
+.backdrop.is-hidden {
+  transform: scale(1.25);
+}
