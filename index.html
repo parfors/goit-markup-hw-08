@@ -67,43 +67,39 @@
             <use href="./images/icons.svg#icon-close_40px"></use>
           </svg>
         </button>
-        <ul class="menu-nav">
-          <li class="menu-nav__item">
+        <ul class="navigation">
+          <li class="navigation__item">
             <a
               href="./index.html"
-              class="menu-nav__link menu-nav__link--curreent-color"
+              class="navigation__link navigation__link--curreent-color"
               >Студия</a
             >
           </li>
-          <li class="menu-nav__item">
-            <a href="./portfolio.html" class="menu-nav__link">Портфолио</a>
+          <li class="navigation__item">
+            <a href="./portfolio.html" class="navigation__link">Портфолио</a>
           </li>
-          <li class="menu-nav__item">
-            <a href="" class="menu-nav__link">Контакты</a>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Контакты</a>
           </li>
         </ul>
-        <a href="tel:+380961111111" class="meny-tel__link">+38 096 111 11 11</a>
-        <a href="mailto:info@devstudio.com" class="menu-adres__link"
+        <a href="tel:+380961111111" class="navigation__tel-link"
+          >+38 096 111 11 11</a
+        >
+        <a href="mailto:info@devstudio.com" class="navigation__adres-link"
           >info@devstudio.com</a
         >
-        <ul class="menu-social">
-          <li class="menu-social__item">
-            <a href="" class="menu-social__link">Instagram</a>
+        <ul class="networks">
+          <li class="networks__item">
+            <a href="" class="networks__link">Instagram</a>
           </li>
-          <li class="menu-social__item">
-            <a href="" class="menu-social__link menu-social__link--stick"
-              >Twitter</a
-            >
+          <li class="networks__item">
+            <a href="" class="networks__link networks__link--stick">Twitter</a>
           </li>
-          <li class="menu-social__item">
-            <a href="" class="menu-social__link menu-social__link--stick"
-              >Facebook</a
-            >
+          <li class="networks__item">
+            <a href="" class="networks__link networks__link--stick">Facebook</a>
           </li>
-          <li class="menu-social__item">
-            <a href="" class="menu-social__link menu-social__link--stick"
-              >LinkedIn</a
-            >
+          <li class="networks__item">
+            <a href="" class="networks__link networks__link--stick">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -180,31 +176,57 @@
           <ul class="techniques">
             <li class="techniques__item">
               <div class="techniques__wrap">
-                <img
-                  src="./images/img.jpg"
-                  alt="Процесс разработки кода"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/techniques-desktop-1--min.jpg   1x,
+                      ./images/techniques-desktop-1-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/techniques-desktop-1--min.jpg"
+                    alt="Процесс разработки кода"
+                    width="370"
+                  />
+                </picture>
+
                 <p class="techniques__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="techniques__item">
               <div class="techniques__wrap">
-                <img
-                  src="./images/img1.jpg"
-                  alt="Процесс подбора стилей для мобильного приложения"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/techniques-desktop-2--min.jpg   1x,
+                      ./images/techniques-desktop-2-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/techniques-desktop-2--min.jpg"
+                    alt="Процесс подбора стилей для мобильного приложения"
+                    width="370"
+                  />
+                </picture>
+
                 <p class="techniques__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="techniques__item">
               <div class="techniques__wrap">
-                <img
-                  src="./images/img2.jpg"
-                  alt="Подбор цветовой гаммы"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/techniques-desktop-3--min.jpg   1x,
+                      ./images/techniques-desktop-3-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/techniques-desktop-3--min.jpg"
+                    alt="Подбор цветовой гаммы"
+                    width="370"
+                  />
+                </picture>
                 <p class="techniques__text">Дизайнерские решения</p>
               </div>
             </li>
@@ -217,11 +239,34 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img
-                src="./images/1.jpg"
-                alt="Фото первого сотрудника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-mobile-1--min.jpg   1x,
+                    ./images/team-mobile-1-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-tablet-1--min.jpg   1x,
+                    ./images/team-tablet-1-2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-desktop-1--min.jpg   1x,
+                    ./images/team-desktop-1-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/team-desktop-1--min.jpg"
+                  alt="Фото первого сотрудника"
+                />
+              </picture>
+
               <div class="team-card__thumb">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
@@ -258,11 +303,33 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/2.jpg"
-                alt="Фото второго сотрудника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-mobile-2--min.jpg   1x,
+                    ./images/team-mobile-2-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-tablet-2--min.jpg   1x,
+                    ./images/team-tablet-2-2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-desktop-2--min.jpg   1x,
+                    ./images/team-desktop-2-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/team-desktop-2--min.jpg"
+                  alt="Фото второго сотрудника"
+                />
+              </picture>
               <div class="team-card__thumb">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -299,11 +366,33 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/3.jpg"
-                alt="Фото третего сотрудника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-mobile-3--min.jpg   1x,
+                    ./images/team-mobile-3-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-tablet-3--min.jpg   1x,
+                    ./images/team-tablet-3-2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-desktop-3--min.jpg   1x,
+                    ./images/team-desktop-3-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/team-desktop-3--min.jpg"
+                  alt="Фото третего сотрудника"
+                />
+              </picture>
               <div class="team-card__thumb">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -340,11 +429,33 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/4.jpg"
-                alt="Фото четвертого сотрудника"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-mobile-4--min.jpg   1x,
+                    ./images/team-mobile-4-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-tablet-4--min.jpg   1x,
+                    ./images/team-tablet-4-2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-desktop-4--min.jpg   1x,
+                    ./images/team-desktop-4-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/team-desktop-4--min.jpg"
+                  alt="Фото четвертого сотрудника"
+                />
+              </picture>
               <div class="team-card__thumb">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>

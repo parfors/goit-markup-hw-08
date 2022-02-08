@@ -10,7 +10,7 @@
 }
 .logo--dark {
   color: #000000;
-  margin-right: 88px;
+  margin-right: auto;
   @include desktop {
     margin-right: 93px;
   }
@@ -19,10 +19,6 @@
   display: none;
   @include tablet {
     display: flex;
-    margin-right: 84px;
-  }
-  @include desktop {
-    margin-right: 305px;
   }
 }
 
@@ -59,13 +55,12 @@
 
 .contacts {
   display: none;
-  margin-left: auto;
   @include tablet {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
   @include desktop {
-    flex-wrap: nowrap;
+    flex-direction: row;
   }
 }
 .contacts__item:not(:last-child) {
