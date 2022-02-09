@@ -3,10 +3,14 @@
 }
 
 .header__container {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   @include flex-alignment();
   justify-content: space-between;
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .logo--dark {
   color: #000000;
