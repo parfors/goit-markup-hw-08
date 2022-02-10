@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   @include tablet {
     margin-bottom: 40px;
     justify-content: center;
@@ -13,6 +13,12 @@
 }
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+.filter__item {
+  margin-bottom: 15px;
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .filter__button {
