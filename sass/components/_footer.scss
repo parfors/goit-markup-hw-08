@@ -7,7 +7,7 @@
   @media screen and (min-width: 768px) {
     @include flex-alignment($ai: baseline);
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
   }
   @media screen and (min-width: 1200px) {
@@ -26,7 +26,7 @@
 .adress {
   margin-bottom: 60px;
   @media screen and (min-width: 768px) {
-    margin-right: 165px;
+    margin-bottom: 0;
   }
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
@@ -59,10 +59,10 @@
 }
 
 .footer-socials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 60px;
+  @include tablet() {
+    margin-bottom: 0;
+  }
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
     align-items: flex-start;
@@ -76,6 +76,7 @@
 }
 .footer-socials__list {
   @include flex-alignment();
+  justify-content: center;
 }
 .footer-socials__item:not(:last-child) {
   margin-right: 10px;
@@ -99,6 +100,9 @@
 }
 .subscribe {
   text-align: center;
+  @include tablet {
+    margin-top: 60px;
+  }
   @media screen and (min-width: 1200px) {
     text-align: start;
   }
